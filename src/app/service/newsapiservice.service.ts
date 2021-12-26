@@ -10,9 +10,9 @@ export class NewsapiserviceService {
   constructor(private _http:HttpClient) { }
     data="";    
 
-  everyThingUrl=`https://newsapi.org/v2/everything?q=bokaro&apiKey=7e5f361b870a4f94b109bb2cb29e34e3`;
-  newsApiUrl="https://newsapi.org/v2/top-headlines?country=in&apiKey=7e5f361b870a4f94b109bb2cb29e34e3";
-  techNewsUrl="https://newsapi.org/v2/top-headlines?country=in&category=technology&apiKey=7e5f361b870a4f94b109bb2cb29e34e3";
+  everyThingUrl=`http://newsapi.org/v2/everything?q=bokaro&apiKey=7e5f361b870a4f94b109bb2cb29e34e3`;
+  newsApiUrl="http://newsapi.org/v2/top-headlines?country=in&apiKey=7e5f361b870a4f94b109bb2cb29e34e3";
+  techNewsUrl="http://newsapi.org/v2/top-headlines?country=in&category=technology&apiKey=7e5f361b870a4f94b109bb2cb29e34e3";
 
   topTechnogy():Observable<any>{
     return this._http.get(this.techNewsUrl);
@@ -25,7 +25,7 @@ export class NewsapiserviceService {
   news2(value:string):Observable<any>{
    
     console.log(value)
-    return this._http.get(`https://newsapi.org/v2/everything?q=`+value+`&apiKey=7e5f361b870a4f94b109bb2cb29e34e3`);
+    return this._http.get(`http://newsapi.org/v2/everything?q=`+value+`&apiKey=7e5f361b870a4f94b109bb2cb29e34e3`);
   }
 
 
